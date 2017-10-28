@@ -1,0 +1,29 @@
+\documentclass[12pt]{report}
+\begin{document}
+
+	\begin{center}
+		\section*{Equations And Proof}
+	\end{center}
+	
+	\begin{enumerate}
+		\item A table is used with two columns
+		\item To increase the line-height use the package \texttt{setspace} and add \texttt{\textbackslash onehalfspacing} after the beginning of your document
+	\end{enumerate}
+	
+	\begin{center}
+		Proving $(q \Leftrightarrow (\neg p \lor \neg q)) \Leftrightarrow (\neg p \land q)$
+		\begin{tabular}{l p{0.5\linewidth}}
+			$q \Leftrightarrow (\neg p \lor \neg q)$ \\
+			$(q \land (\neg p \lor \neg q)) \lor (\neg q \land \neg(\neg p \lor \neg q))$  & Equivalence \\
+			$(q \land (\neg p \lor \neg q)) \lor (\neg q \land (\neg\neg p \land \neg\neg q))$ & DeMorgan \\
+			$ (q \land (\neg p \lor \neg q)) \lor (\neg q \land (p \land q)) $ & Double Negation \\
+			$(q \land (\neg p \lor \neg q)) \lor (\bot \land p) $  & Complement \& Associative \\
+			$(q \land (\neg p \lor \neg q))$ & $(\bot \land p)$ Bottom Always False \\
+			$(q \land \neg p) \lor (q \land \neg q)$ & Distributive \\
+			$q \land \neg p$ \\
+			\\
+			Therefore $(q \Leftrightarrow (\neg p \lor \neg q)) \Leftrightarrow (\neg p \land q)$
+		\end{tabular}
+    \end{center}
+	
+\end{document}
